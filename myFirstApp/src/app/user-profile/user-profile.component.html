@@ -1,11 +1,11 @@
 <img [src]="user.photo" [alt]="user.name" />
 <p>{{ user.name }}</p>
 <p>{{ user.firstName }}</p>
-<p [hidden]="displayUserAge">{{ user.age }} ans</p>
+<p [hidden]="user.displayUserAge">{{ user.age }} ans</p>
 <q>{{ user.quote }}</q>
 <br />
 <br />
 <input type="text" [(ngModel)]="user.quote" />
 <br />
 <br />
-<button (click)="DisplayAge()">Afficher/Masquer mon âge</button>
+<button (click)="user.displayAge()">Afficher/Masquer mon âge</button>
