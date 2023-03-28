@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = ' Bienvenue sur le site de';
+  title: string = ' Top 6 Movies of 20Th and 21Th Century';
+  showList: boolean = true;
+
+
 }
