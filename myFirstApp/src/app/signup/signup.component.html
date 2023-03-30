@@ -1,9 +1,4 @@
 <form #myForm="ngForm" (ngSubmit)="onSubmit()">
-  <div>
-    Form submitted ? {{ myForm.submitted }} Form valid ? {{ myForm.valid }} Form
-    invalid ? {{ myForm.invalid }}
-  </div>
-
   <fieldset>
     <label for="email">email</label>
     <input
@@ -19,15 +14,17 @@
   </fieldset>
 
   <!-- Message d'erreurs de title -->
-  <div *ngIf="email.errors">
+  <div *ngIf="email.errors && myForm.submitted">
     <span *ngIf="email.errors?.['required']">L'email est requis</span>
     <span *ngIf="email.errors?.['minlength']"
       >La longueur minimale doit être supérieure à 5</span
     >
-    <span *ngIf="email.errors?.['maxlength']"
-      >La longueur maximale doit être inférieure à 30</span
-    >
+
     <span *ngIf="email.errors?.['email']">Doit être au format email</span>"
+
+    <span *ngIf="email.errors?.['maxlength']"
+      >Ne doit pas contenir plus de 15 caractères</span
+    >
   </div>
 
   <fieldset>
@@ -43,7 +40,7 @@
   </fieldset>
 
   <!-- Message d'erreurs de quantity -->
-  <div *ngIf="firstname.errors">
+  <div *ngIf="firstname.errors && myForm.submitted">
     <span *ngIf="firstname.errors?.['required']"
       >Le champ firstname est requis</span
     >
@@ -65,7 +62,7 @@
   </fieldset>
 
   <!-- Message d'erreurs de date -->
-  <div *ngIf="lastname.errors">
+  <div *ngIf="lastname.errors && myForm.submitted">
     <span *ngIf="lastname.errors?.['required']"
       >Le champ lastname est requis</span
     >
@@ -88,15 +85,30 @@
   </fieldset>
 
   <!-- Message d'erreurs de contact -->
-  <div *ngIf="password.errors">
+  <div *ngIf="password.errors && myForm.submitted">
     <span *ngIf="password.errors?.['required']"
       >Le champ password est requis</span
     >
-    <span *ngIf="password.errors?.['minlength']"
+    <span *ngIf="password.errors?.['minlength=3']"
       >Doit contenir au moins 3 caractères</span
     >
   </div>
-
+  <div *ngIf="email.errors && myForm.submitted">
+    <span *ngIf="email.errors['required']">Le champ mail est requis</span>
+    <span *ngIf="email.errors['email']">L'adresse mail doit être valide</span>
+    <span *ngIf="email.errors?.['minlength']"
+      >Doit contenir au moins 3 caractères</span
+    >
+  </div>
   <button type="reset">Restaurer</button>
   <button type="submit">S'enregister</button>
+
+  <div class="formContainer" *ngIf="showInfos">
+    <p>Your informations:</p>
+    <div>
+      <div>Firstname: {{ user.firstname }}</div>
+      <div>Lastname: {{ user.lastname }}</div>
+      <div>Email: {{ user.email }}</div>
+    </div>
+  </div>
 </form>

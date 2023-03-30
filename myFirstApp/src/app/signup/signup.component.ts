@@ -6,12 +6,25 @@ import { User } from 'src/model/user'
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+  showInfos = false;
 
+  user = {
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: '',
+  };
+  showRecap(): void {
+    this.showInfos = !this.showInfos;
+    console.log(this.showInfos)
+  }
   model: User = new User("", "", "", "");
   constructor() { }
   onSubmit(): void {
 
-    console.log('Votre compte a bien été enregistré');
+    console.log(this.model);
+
   }
+
 
 }
