@@ -4,6 +4,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MenuComponent } from './menu/menu.component';
+import { MyFormComponent } from './my-form/my-form.component';
 
 const ROUTES: Routes = [
     { path: '', component: UserProfileComponent },
@@ -12,6 +13,7 @@ const ROUTES: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'user', component: UserProfileComponent },
+    { path: 'my-form', component: MyFormComponent }
 
 
 
