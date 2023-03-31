@@ -10,6 +10,8 @@ import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { SignupComponent } from './signup/signup.component';
 import { MyFormComponent } from './my-form/my-form.component';
+import { DeveloperComponent } from './developer/developer.component';
+import { SkillComponent } from './skill/skill.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { MyFormComponent } from './my-form/my-form.component';
     ContactComponent,
     MenuComponent,
     SignupComponent,
-    MyFormComponent
+    MyFormComponent,
+    DeveloperComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,
