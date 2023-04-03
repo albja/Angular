@@ -5,3 +5,11 @@
 </ul>
 
 <router-outlet></router-outlet>
+
+<h1>Liste d'onomatopées:</h1>
+<ul>
+  <li *ngFor="let on of onomatopoeiaList">{{ on }}</li>
+</ul>
+<app-create-onomatopia
+  (sendOnomatopiaToApp)="onReceiveNewOnomatopia($event)"
+></app-create-onomatopia>

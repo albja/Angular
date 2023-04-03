@@ -12,6 +12,7 @@ import { SignupComponent } from './signup/signup.component';
 import { MyFormComponent } from './my-form/my-form.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { SkillComponent } from './skill/skill.component';
+import { CreateOnomatopiaComponent } from './create-onomatopia/create-onomatopia.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SkillComponent } from './skill/skill.component';
     SignupComponent,
     MyFormComponent,
     DeveloperComponent,
-    SkillComponent
+    SkillComponent,
+    CreateOnomatopiaComponent
   ],
   imports: [
     BrowserModule,
