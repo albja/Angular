@@ -1,0 +1,11 @@
+* {
+  text-align: center;
+  font-size: 25px;
+}
+
+.images {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}

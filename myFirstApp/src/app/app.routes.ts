@@ -6,6 +6,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MenuComponent } from './menu/menu.component';
 import { MyFormComponent } from './my-form/my-form.component';
 import { DeveloperComponent } from './developer/developer.component';
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 
 
 const ROUTES: Routes = [
@@ -17,8 +18,8 @@ const ROUTES: Routes = [
     { path: 'user', component: UserProfileComponent },
     { path: 'my-form', component: MyFormComponent },
     { path: 'developer', component: DeveloperComponent },
-
-
+    { path: 'cocktailList', component: CocktailListComponent },
+    { path: '**', redirectTo: 'user' }
 
 ];
 
